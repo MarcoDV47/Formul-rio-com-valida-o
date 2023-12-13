@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/css/reset.css">
+    <link rel="stylesheet" href="src/css/variables.css">
+    <link rel="stylesheet" href="src/css/style.css">
+    <title>Input</title>
+</head>
+
+<body>
+
+    <main>
+        <section class="text">
+            <h1>Ficou com dúvida?<br>
+                Nos mande uma mensagem!</h1>
+            <p>Caso tenha ficado com qualquer dúvida basta nos mandar uma mensagem e entraremos em contato em menos de
+                24h.</p>
+        </section>
+        <section class="form">
+            <form method="post" action="index.html">
+                <input type="text" name="name" placeholder=" Nome completo *">
+                <p class="alerta">campo obrigatório</p>
+                <input type="email" name="email" placeholder=" Email *">
+                <p class="alerta">campo obrigatório</p>
+                <input type="tel" name="tel" placeholder=" Telefone *">
+                <p class="alerta">campo obrigatório</p>
+                <textarea name="message" id="mensagem" cols="30" rows="7" placeholder=" Mensagem *"></textarea>
+                <p class="alerta">campo obrigatório</p>
+                <p>*campos obrigatórios</p>
+                <button>Enviar</button>
+            </form>
+        </section>
+    </main>
+    <script src="index.js"></script>
+</body>
+
+</html>

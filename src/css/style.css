@@ -1,0 +1,88 @@
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(../images/bg-repeat.jpg) repeat-x 100% center;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    gap: 5em;
+    align-items: center;
+}
+
+main section.text {
+    color: #fff;
+    max-width: 25%;
+}
+
+main section.text h1 {
+    text-transform: uppercase;
+    font-size: 1.25em;
+    margin-bottom: 11px;
+}
+
+main section.text p {
+    font-size: 1em
+}
+
+form {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin: 12px auto;
+}
+
+form input,
+form textarea {
+    margin-bottom: 20px;
+    padding: 5px;
+    font-family: 'Roboto', sans-serif;
+}
+
+form input {
+    width: 300px;
+    height: 35px;
+}
+
+.falha {
+    border: 2px solid var(--error);
+    border-radius: 5px;
+}
+
+.sucesso {
+    border: 2px solid var(--success);
+    border-radius: 5px;
+}
+
+form p.alerta {
+    font-size: 10px;
+    margin-top: -20px;
+    margin-bottom: 7px;
+    color: red;
+    display: none;
+}
+
+p.alerta.mostrar {
+    display: inline-block;
+}
+
+form p:last-of-type {
+    margin-bottom: 10px;
+}
+
+form button {
+    background-color: var(--success);
+    color: #fff;
+    padding: 1.2em;
+    border: 0;
+    border-radius: 8px;
+    font-weight: 700;
+}
