@@ -2,23 +2,19 @@ const inputs = document.querySelectorAll("input, textarea");
 const alertas = document.querySelectorAll("p.alerta");
 const button = document.querySelector("button");
 
-let i = 0;
+let inputsPreenchidos = []
 
 button.addEventListener("click", function () {
-    inputs.forEach(e => {
+    inputs.forEach((e, i) => {
         if (e.value == "") {
             alertas[i].classList.add("mostrar");
             foiFalha(e);
         } else {
             alertas[i].classList.remove("mostrar");
             foiSucesso(e);
+            inputsPreenchidos.push(e);
         }
-
-        i++;
-
-        if (i > alertas.length - 1) {
-            i = 0;
-        }
+        podeAprovar();
     });
 });
 
@@ -32,4 +28,10 @@ foiFalha = (e) => {
     e.classList.add("falha");
 }
 
-
+const podeAprovar = () => {
+    if (inputsPreenchidos.length < inputs.length) {
+        return false
+    } else if (inputsPreenchidos.length == inputs.length) {
+        return true;
+    }
+}
